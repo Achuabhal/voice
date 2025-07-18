@@ -10,9 +10,8 @@ export default function VoiceToText() {
   const [loading, setLoading] = useState(false);
   const [trnass, setTranscript] = useState('');
   
-  const API_KEY = '0b4c984be36f47b08c56192c3fd0180f'; // Replace this with your actual API key
-  const APII_KEY = 'AIzaSyBn7RO1JMhz4LqGwuFuFWAXAhEUJQauOJ4'; // Replace this with your actual API key
-
+  const API_KEY = import.meta.env.VITE_ASSEMBLYAI_API_KEY;
+  const APII_KEY = import.meta.env.VITE_GEMINI_API_KEY;
   
   const handleFileChange = (e) => {
     setAudioFile(e.target.files[0]);
